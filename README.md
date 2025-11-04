@@ -1,5 +1,7 @@
 # Credit Risk Assessment System
 
+website = https://web-production-bc4aa.up.railway.app/
+
 ## 🎯 Project Conventions & Metadata
 
 ### Target Variable
