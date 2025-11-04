@@ -1,0 +1,15 @@
+{
+    "Gender": 1,
+    "Married": 1,
+    "Education": 0,
+    "Self_Employed": 0,
+    "ApplicantIncome": 5000,
+    "CoapplicantIncome": 2000,
+    "LoanAmount": 150,
+    "Loan_Amount_Term": 360,
+    "Credit_History": 1.0,
+    "Property_Area": 2,
+    "Total_Income": 7000,
+    "EMI": 0.416,
+    "Debt_to_Income_Ratio": 0.059
+}
