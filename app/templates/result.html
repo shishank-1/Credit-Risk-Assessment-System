@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction Result | Credit Risk System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <h1>Credit Risk Assessment Result</h1>
+            <p class="subtitle">Developed by <strong>Shishank</strong></p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- Result Card -->
+        <div class="result-card {% if prediction_text == 'Loan Approved' %}success{% else %}failure{% endif %}">
+            <h2>Prediction Result</h2>
+
+            {% if prediction_text == 'Loan Approved' %}
+                <div class="icon success-icon">✔️</div>
+                <p class="result-message">Congratulations! Your loan has been <strong>Approved</strong>.</p>
+                <p class="result-detail">Our model predicts a high likelihood of repayment based on your submitted financial details.</p>
+
+            {% else %}
+                <div class="icon failure-icon">❌</div>
+                <p class="result-message">Sorry! Your loan application has been <strong>Rejected</strong>.</p>
+                <p class="result-detail">Don’t worry — here are a few suggestions that might help improve your chances:</p>
+
+                <!-- Suggestion Box -->
+                <div class="suggestion-box">
+                    <h3>🧭 Suggestions to Improve Your Loan Eligibility</h3>
+                    <ul>
+                        {% if suggestions %}
+                            {% for s in suggestions %}
+                                <li>{{ s }}</li>
+                            {% endfor %}
+                        {% else %}
+                            <li>Maintain a good credit history with consistent repayments.</li>
+                            <li>Try adding a co-applicant to increase combined income.</li>
+                            <li>Consider applying for a lower loan amount or longer term.</li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endif %}
+            
+            <div class="btn-container">
+                <a href="/" class="btn-primary">Back to Form</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Demo Example Section (Footer Placement) -->
+    <section class="demo-section">
+        <h3>📊 Example of an Approved Application</h3>
+        <div class="demo-content">
+            <table class="demo-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gender</td><td>Male</td></tr>
+                    <tr><td>Married</td><td>Yes</td></tr>
+                    <tr><td>Education</td><td>Graduate</td></tr>
+                    <tr><td>Self Employed</td><td>No</td></tr>
+                    <tr><td>Applicant Income</td><td>5500</td></tr>
+                    <tr><td>Coapplicant Income</td><td>1800</td></tr>
+                    <tr><td>Loan Amount</td><td>120</td></tr>
+                    <tr><td>Loan Term</td><td>360</td></tr>
+                    <tr><td>Credit History</td><td>1.0</td></tr>
+                    <tr><td>Property Area</td><td>Urban</td></tr>
+                    <tr class="approved-row"><td>Predicted Status</td><td><strong>Approved ✅</strong></td></tr>
+                </tbody>
+            </table>
+            <p class="demo-note">This is an example of a profile with stable income, good credit history, and balanced financials — resulting in an approved loan.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Credit Risk Assessment | Developed by <strong>Shishank</strong></p>
+    </footer>
+</body>
+</html>
