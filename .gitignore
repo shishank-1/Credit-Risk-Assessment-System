@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+data/raw/
+models/*.pkl      # OPTIONAL: if you don't want to push model to GitHub (then upload via Render file storage or repo)
+database/*.db
+.ipynb_checkpoints/

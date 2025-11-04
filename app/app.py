@@ -12,6 +12,8 @@ import os
 
 app = Flask(__name__)
 
+
+
 # Load trained Random Forest model
 model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'random_forest_model.pkl')
 model = joblib.load(model_path)
