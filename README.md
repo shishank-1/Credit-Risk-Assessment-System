@@ -26,22 +26,5 @@ N → 0
 - Work on this branch during experimentation  
 - Merge into `main` once results are validated
 
-### Folder Structure Reminder
-data/
-├── raw/
-├── processed/
-src/
-├── data/
-├── models/
-├── app/
-notebooks/
-├── 01_EDA_and_Preprocessing.ipynb
 
 
----
-
-## 📅 Metadata Summary
-- **Dataset Source:** Synthetic dataset generated using NumPy & Pandas  
-- **Version:** 1.0  
-- **Created On:** 2025-11-04  
-- **Author:** Shadow (Project Owner)
